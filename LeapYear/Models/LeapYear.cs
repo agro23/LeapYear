@@ -2,10 +2,15 @@ namespace LeapYear
 {
   public class LeapYear
   {
-    public bool IsLeapYear(int year)
+    public static bool IsLeapYear(int year)
     {
-      // eventually your code will go here
-      return false;
+      if (year % 100 == 0 && year % 400 != 0) {
+        return false;
+      }
+      else
+      {
+        return year % 4 == 0;
+      }
     }
   }
 }
